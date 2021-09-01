@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Board 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="grid-item item1">
+            <section id="s">
+                <img class="tanaman" style="margin-left: -100px;" src="img/tanaman.png"/>
+                <div class="gambar">
+                    <img class="ruler" src="img/ruler.png"/>
+                </div>
+                <img class="eye" src="img/eye.png"/>
+            </section>
+            <section id="ph-screen-2">
+                <h2 class="ph-name">pH Value</h2>
+                <a href="screen2.html" class="tbl-pink active">4.0</a>
+                <a href="screen2-1.html" class="tbl-pink">5.0</a>
+                <a href="screen2-2.html" class="tbl-pink">6.0</a>
+                <a href="screen2-3.html" class="tbl-pink">7.0</a>
+                <a href="screen2-4.html" class="tbl-pink">8.0</a>
+            </section>
+        </div>
+        <div class="grid-item item2">
+            <div id="static-table">
+                <p id="hakim">Hakim wanted to find the most suitable pH for growing plant X. He grew five seeds of plant X at different pH for three weeks, and recorded the height of each plant in table 1 below</p>
+                <br>
+                <br>
+                <p>table 1</p>
+                <br>
+                <table class="center">
+                    <tr>
+                    <td>pH</td>
+                    <td>4.0</td>
+                    <td>5.0</td>
+                    <td>6.0</td>
+                    <td>7.0</td>
+                    <td>8.0</td>
+                    </tr>
+                    <tr>
+                    <td>Height of Plant in cm</td>
+                    <td>20.0</td>
+                    <td>23.0</td>
+                    <td>19.0</td>
+                    <td>15.0</td>
+                    <td>23.0</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    <form name="forminput" method="post" action="screenb.html"  class="grid-item item3">
+        <div class="">
+            <div id="fill-a">
+                <div class="grid-container" style="border: 1px solid #000; border-radius: 20px;">
+                    <div class="grid-item item-fill1">
+                        <h5>Fill in the blank</h5>
+                        <h1 style="font-size: 150px;">A</h1>
+                    </div>
+                    <div class="grid-item item-fill2">
+                            <p class="which">Which data did Hakim record wrongly. You may observe how Hakim measures the height of the plants by moving the sider along the pH scale.</p>
+                            <br>
+                            <br>
+                            <p>pH <input type="number" name="1st" required>. The reading should be <input type="number" name="2nd" required> cm instead of <input type="number" name="3rd" required> cm</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+            <div class="grid-item item4"></div>
+            <div class="grid-item item5">
+                <section id="next">
+                    <div class="gambar">
+                        <p class="deskripsi">Click this to move screen</p>
+                        <form name="forminput" method="post" action="screenb.html">
+                            <a href="index.html" class="tbl-biru">back</a>
+                            <input type="submit" value="Submit" class="tbl-biru" onclick="myFunction()">
+                        </form>
+                    </div>
+                </section>
+            </div>   
+        </form>
+
+        <div class="grid-item item6"></div>
+        <div class="grid-item item7"></div>
+        <div class="grid-item item8"></div>
+        <div class="grid-item item9"></div>  
+</div>
+
+    <div id="copyright">
+        <div class="wrapper">
+            &copy; 2021. <b>JilanAriqoNafisa.</b> All Rights Reserved.
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            if(document.forms["forminput"]["1st"].value == "" || document.forms["forminput"]["2nd"].value == "" || document.forms["forminput"]["3rd"].value == "") {
+                alert("Tidak Boleh Kosong");
+                return false;
+            } else if (document.forms["forminput"]["1st"].value != "7" || document.forms["forminput"]["2nd"].value != "8" || document.forms["forminput"]["3rd"].value != "9") {
+                event.preventDefault()
+                alert("Observe how Hakkim the height of the plant at various pH, check this againts this data he record on table 1");
+            }
+            else{
+                alert("Plants need suitable pH to grow well.");
+            }
+        }
+    </script>
+    
+</body>
+</html>
